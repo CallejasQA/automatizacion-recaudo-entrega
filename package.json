@@ -3,12 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "clean": "rimraf target",
+    "testa": "npm run clean && cucumber-js",
+    "report": "serenity-bdd run",
+    "test": "cucumber-js --require-module ts-node/register --require tests/step_definitions/**/*.ts tests/features/**/*.feature"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
     "@playwright/test": "^1.50.1",
+    "@serenity-js/console-reporter": "^3.31.9",
+    "@serenity-js/core": "^3.31.9",
+    "@serenity-js/cucumber": "^3.31.9",
+    "@serenity-js/playwright": "^3.31.9",
+    "@serenity-js/serenity-bdd": "^3.31.9",
     "@types/node": "^22.13.5"
   }
 }
