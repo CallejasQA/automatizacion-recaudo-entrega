@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf target",
     "testa": "npm run clean && cucumber-js",
-    "report": "serenity-bdd run",
+    "report": "npx serenity-bdd run",
     "test": "cucumber-js --require-module ts-node/register --require tests/step_definitions/**/*.ts tests/features/**/*.feature"
   },
   "keywords": [],
@@ -20,6 +20,7 @@
     "@serenity-js/cucumber": "^3.31.9",
     "@serenity-js/playwright": "^3.31.9",
     "@serenity-js/serenity-bdd": "^3.31.9",
-    "@types/node": "^22.13.5"
+    "@types/node": "^22.13.5",
+    "ts-node": "^10.9.2"
   }
 }
